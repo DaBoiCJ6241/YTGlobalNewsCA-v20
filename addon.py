@@ -4,7 +4,7 @@ from resources.lib import mainaddon
 plugin = Plugin()
 url0 = "https://live.corusdigitaldev.com/groupb/live/6512f46a-8730-4668-af48-83159f3c706d/live.isml/live-audio_1=96000-video=2499968-261185081.ts"
 url1 = "https://www.youtube.com/feeds/videos.xml?channel_id=UChLtXXpo4Ge1ReTEboVvTDg"#GLOBALNEWS
-url1 = "https://www.youtube.com/feeds/videos.xml?channel_id=UCkiP0kvvwqUWlttRLCq88gw"#GLOBALTV
+url2 = "https://www.youtube.com/feeds/videos.xml?channel_id=UCkiP0kvvwqUWlttRLCq88gw"#GLOBALTV
 url3 = "https://www.youtube.com/feeds/videos.xml?channel_id=UCxUD8G1jO8T-Ef2tuADCZOA"#16x9
 
 @plugin.route('/')

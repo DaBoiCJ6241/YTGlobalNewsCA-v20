@@ -2,6 +2,11 @@ import requests
 import re
 from bs4 import BeautifulSoup
 
+url0 = "https://live.corusdigitaldev.com/groupb/live/6512f46a-8730-4668-af48-83159f3c706d/live.isml/live-audio_1=96000-video=2499968-261185081.ts"
+url1 = "https://www.youtube.com/feeds/videos.xml?channel_id=UChLtXXpo4Ge1ReTEboVvTDg"#GLOBALNEWS
+url2 = "https://www.youtube.com/feeds/videos.xml?channel_id=UCkiP0kvvwqUWlttRLCq88gw"#GLOBALTV
+url3 = "https://www.youtube.com/feeds/videos.xml?channel_id=UCxUD8G1jO8T-Ef2tuADCZOA"#16x9
+
 def get_soup1(url1):
     page = requests.get(url1)
     soup1 = BeautifulSoup(page.text, 'html.parser')
@@ -25,7 +30,7 @@ get_soup3("https://www.youtube.com/feeds/videos.xml?channel_id=UCxUD8G1jO8T-Ef2t
 
 def get_playable_podcast1(soup1):
     subjects = []
-    for content in soup1.find_all('item'):
+    for content in soup1.find_all('entry'):
         try:        
             link = content.find('media:content')
             link = link.get('url')
@@ -56,7 +61,7 @@ def compile_playable_podcast1(playable_podcast1):
 
 def get_playable_podcast2(soup2):
     subjects = []
-    for content in soup2.find_all('item'):
+    for content in soup2.find_all('entry'):
         try:        
             link = content.find('media:content')
             link = link.get('url')
@@ -87,7 +92,7 @@ def compile_playable_podcast2(playable_podcast2):
 
 def get_playable_podcast3(soup3):
     subjects = []
-    for content in soup3.find_all('item'):
+    for content in soup3.find_all('entry'):
         try:        
             link = content.find('media:content')
             link = link.get('url')
