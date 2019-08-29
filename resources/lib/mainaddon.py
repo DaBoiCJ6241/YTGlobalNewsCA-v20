@@ -7,7 +7,7 @@ def get_soup1(url1):
     soup1 = BeautifulSoup(page.text, 'html.parser')
     print("type: ", type(soup1))
     return soup1
-get_soup("https://www.youtube.com/feeds/videos.xml?channel_id=UChLtXXpo4Ge1ReTEboVvTDg")
+get_soup1("https://www.youtube.com/feeds/videos.xml?channel_id=UChLtXXpo4Ge1ReTEboVvTDg")
 
 def get_soup2(url2):
     page = requests.get(url2)
