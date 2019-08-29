@@ -34,7 +34,7 @@ def main_menu():
 @plugin.route('/GN_episodes/')
 def GN_episodes():
     soup1 = mainaddon.get_soup1(url1)
-    playable_podcast1 = mainaddon.get_playable_podcast(soup1)
+    playable_podcast1 = mainaddon.get_playable_podcast1(soup1)
     items = mainaddon.compile_playable_podcast1(playable_podcast1)
     return items
 
